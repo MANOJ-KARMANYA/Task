@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #d1 {
+            border: 1px solid black;
+            border-radius: 50%;
+            box-shadow: 4px 10px 10px lightseagreen;
+            margin: auto;
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            display: flex; /* Center content vertically and horizontally */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            font-size: 16px; /* Adjust font size for time display */
+        }
+
+        .d {
+            text-align: center; /* Center text within the circle */
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="d1">
+        <div class="d"></div>
+    </div>
+
+    <script>
+        function myclock(){
+            let mytime = new Date();
+            let formattedTime = mytime.toLocaleTimeString();
+            document.querySelector(".d").textContent = formattedTime; // Update text content
+        }
+
+        setInterval(myclock, 1000); // Update clock every second
+    </script>
+
+</body>
+</html>

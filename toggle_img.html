@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <img src="../FED/HTML/image/starbuks.png" alt="satrabucks" id="img1">
+    <strong id="imgName">Starbucks</strong>
+
+    <button type="button" onclick="changeImg()">Change Image</button>
+
+
+    <script>
+        let value = true;
+        function changeImg(){
+            if(value==true){
+                value = false;
+                document.getElementById("img1").src="../FED/HTML/image/favicon.png";
+                document.getElementById("imgName").innerHTML = "Changepond";
+                
+            }
+            else{
+                value = true;
+                document.getElementById("img1").src="../FED/HTML/image/starbuks.png";
+                document.getElementById("imgName").innerHTML = "starbucks";
+
+            }
+         
+
+
+        }
+
+    </script>
+
+</body>
+</html>

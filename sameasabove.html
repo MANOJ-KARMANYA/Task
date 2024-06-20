@@ -1,0 +1,44 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Same as above</title>
+
+    <style>
+        .myform {
+            border: 3px solid brown;
+            height: 210px;
+            width: 400px;
+            margin: auto;
+            padding: 5%;
+            border-radius: 10px;
+            box-shadow: 4px 10px 10px lightcoral;
+        }
+    </style>
+</head>
+<body>
+
+    <form class="myform">
+        <label for="temp">Temp Address</label><br><br>
+        <textarea id="temp" name="temp"></textarea><br><br>
+
+        <button type="button" onclick="copyTempToPermanent()">Same as above</button><br><br>
+
+        <label for="ans">Permanent Address</label><br><br>
+        <textarea id="ans" name="ans"></textarea>
+    </form>
+
+    <script>
+        function copyTempToPermanent() {
+            // Get the value from temp textarea
+            let tempAddress = document.getElementById("temp").value;
+
+            // Set the value to ans textarea
+            document.getElementById("ans").value = tempAddress;
+        }
+    </script>
+
+</body>
+</html>
